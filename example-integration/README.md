@@ -81,8 +81,8 @@ and the discovery server will be configured for you.
 
 ## Logging
 
-If you want to have a consistent logging through you applications
-with direct support to your graylog all you have to add is the
+If you want to have a consistent logging through your applications
+with console, file and graylog based logging all you have to do is add the
 [logging starter](https://github.com/coffeenet/coffeenet-starter/tree/master/coffeenet-starter-logging) dependency
 
 ```xml
@@ -91,6 +91,9 @@ with direct support to your graylog all you have to add is the
     <artifactId>starter-logging</artifactId>
 </dependency>
 ```
+
+Have a look at the [logging starter documentation](https://github.com/coffeenet/coffeenet-starter/tree/master/coffeenet-starter-logging) when the different appenders will be automatically available and how you can turn them on and off.
+
 
 ## Web
 
