@@ -1,0 +1,7 @@
+coffeenet:
+  application-name: ExampleProjectWithIntegrationProfile
+  profile: integration
+  security:
+    client:
+      client-id: coffeeNetClient
+      client-secret: coffeeNetClientSecret

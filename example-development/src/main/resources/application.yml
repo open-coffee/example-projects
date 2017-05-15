@@ -1,7 +1,3 @@
 coffeenet:
-  application-name: ExampleProject
+  application-name: ExampleProjectWithDevelopmentProfile
   profile: development
-  security:
-    client:
-      client-id: coffeeNetClient
-      client-secret: coffeeNetClientSecret

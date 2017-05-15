@@ -1,15 +1,21 @@
-# Development profile example project
+# Integration profile example project
 
-This is an example project to show how to use the **development** profile.
-The **development** profile was created to develop applications _without_ external dependencies, e.g. for local development.
+This is an example project to show how to use the **integration** profile.
+The **integration** profile was created to develop applications _with_ external dependencies.
 All external dependencies like the [authentication server](https://github.com/coffeenet/coffeenet-auth) and the
-[service discovery](https://github.com/coffeenet/coffeenet-discovery) are mocked.
+[service discovery](https://github.com/coffeenet/coffeenet-discovery) have to be provided.
+You can use the [dockerized](https://github.com/coffeenet/coffeenet-dockerized) project or
+just start each application you need by hand.
 
-The **development** an be activated in the configuration file with
+All default configurations are preconfigured with _http://localhost:${port}_ so you can just start the
+application and their dependencies and start coding. If you want to change the default values you can override them
+in the default properties file. You find all default values in the Readmes of the specific starters.
+
+The **integration** an be activated in the configuration file with
 
 ```yaml
 coffeenet:
-  profile: development
+  profile: integration
 ```
 
 Before you add the _CoffeeNet starters_ to your pom you can use the _CoffeeNet parent_ to fix the versions.
@@ -46,14 +52,25 @@ and the security is ready.
 </dependency>
 ```
 
-The CoffeeNet provides, when the [CoffeeNetCurrentUserService](https://github.com/coffeenet/coffeenet-starter/blob/master/coffeenet-autoconfigure/src/main/java/coffee/synyx/autoconfigure/security/service/DevelopmentCoffeeNetCurrentUserService.java)
-to the [authentication server](https://github.com/coffeenet/coffeenet-auth) is mocked,
-[two default logins](https://github.com/coffeenet/coffeenet-starter/tree/master/coffeenet-starter-sso#aktivierung-des-single-sign-ons) will be provided.
-One is the _admin_ with the role _COFFEENET-ADMIN_ and the other one is the _user_ with the role _COFFEENET-USER_.
+and add the preconfigured _client-id_ and _client-secret_ to your default properties file.
+These client information will be added when the
+[development mode](https://github.com/coffeenet/coffeenet-auth/blob/master/README.md#development-mode)
+of the auth server is activated.
+
+```yaml
+coffeenet:
+  application-name: ExampleProjectWithIntegrationProfile
+  profile: integration
+  security:
+    client:
+      client-id: coffeeNetClient
+      client-secret: coffeeNetClientSecret
+```
 
 ## Service Discovery
 
-Same here. Just add the [discovery starter](https://github.com/coffeenet/coffeenet-starter/tree/master/coffeenet-starter-discovery) to your pom.
+Just add the [discovery starter](https://github.com/coffeenet/coffeenet-starter/tree/master/coffeenet-starter-discovery) to your pom
+and the discovery server will be configured for you.
 
 ```xml
 <dependency>
@@ -61,11 +78,6 @@ Same here. Just add the [discovery starter](https://github.com/coffeenet/coffeen
     <artifactId>starter-discovery</artifactId>
 </dependency>
 ```
-
-When the [service discovery](https://github.com/coffeenet/coffeenet-discovery) is mocked a specific development
-[CoffeeNetAppService](https://github.com/coffeenet/coffeenet-starter/blob/master/coffeenet-autoconfigure/src/main/java/coffee/synyx/autoconfigure/discovery/service/DevelopmentCoffeeNetAppService.java)
-will be injected and provides three predefined _CoffeeNetApps_ with different roles and information.
-
 
 ## Logging
 
