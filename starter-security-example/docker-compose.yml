@@ -1,0 +1,34 @@
+version: '2'
+services:
+
+  auth:
+    image: coffeenet/coffeenet-auth:latest
+    volumes:
+      - ./docker-application-yml/auth-server-application.yml:/application.yml
+    ports:
+      - '9999:9999'
+    hostname: coffeenet-auth.coffeenet
+    links:
+      - discovery:coffeenet-discovery.coffeenet
+      - ldap:coffeenet-ldap.coffeenet
+      - mariadb:mariadb.coffeenet
+    depends_on:
+      - ldap
+      - mariadb
+  ldap:
+    image: coffeenet/ldap:latest
+    ports:
+      - '38900:389'
+    hostname: coffeenet-ldap.coffeenet
+  mariadb:
+    build: src/main/docker/mariadb
+    ports:
+      - '3308:3306'
+    hostname: mariadb.coffeenet
+  discovery:
+    image: coffeenet/coffeenet-discovery:latest
+    volumes:
+      - ./docker-application-yml/discovery-server-application.yml:/application.yml
+    ports:
+      - "8761:8761"
+    hostname: coffeenet-discovery.coffeenet

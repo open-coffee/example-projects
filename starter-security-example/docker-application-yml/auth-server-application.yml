@@ -1,0 +1,54 @@
+coffeenet:
+  profile: integration
+  application-name: CoffeeNet Auth
+  allowed-authorities: ROLE_COFFEENET-ADMIN
+  security:
+    enabled: false
+  discovery:
+    instance:
+      home-page-url: http://localhost:9999/clients
+      hostname: localhost
+      non-secure-port: 9999
+    client:
+      service-url:
+        defaultZone: http://coffeenet-discovery.coffeenet:8761/eureka/
+  logging:
+    console:
+      enabled: true
+    gelf:
+      server: coffeenet-logging.coffeenet
+      enviroment: docker
+
+auth:
+  development: true
+  default-redirect-url: http://localhost:8080
+  ldap:
+    url: ldap://coffeenet-ldap.coffeenet:389
+    base: dc=coffeenet
+    userSearchBase: ou=People
+    userSearchFilter: uid={0}
+    groupSearchBase: ou=Groups
+    groupSearchFilter: member={0}
+    connection-with-tls: false
+
+server:
+  port: 9999
+  session:
+    cookie:
+      name: coffee-cookie
+
+spring:
+  datasource:
+    url: jdbc:mariadb://mariadb.coffeenet:3306/auth
+    username: auth
+    password: auth
+    driver-class-name: org.mariadb.jdbc.Driver
+    tomcat:
+      test-on-borrow: true
+      validation-query: SELECT 1
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+  messages:
+    fallback-to-system-locale: false

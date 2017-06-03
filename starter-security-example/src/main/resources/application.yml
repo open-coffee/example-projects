@@ -1,0 +1,19 @@
+spring:
+    profiles: development
+
+coffeenet:
+  application-name: SecurityDevelopmentExample
+  profile: development
+
+---
+
+spring:
+    profiles: integration
+
+coffeenet:
+  application-name: SecurityDevelopmentExample
+  profile: integration
+  security:
+    client:
+      client-id: coffeeNetClient
+      client-secret: coffeeNetClientSecret

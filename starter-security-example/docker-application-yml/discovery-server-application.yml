@@ -1,0 +1,24 @@
+server:
+  port: 8761
+
+eureka:
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+
+coffeenet:
+  profile: integration
+  application-name: CoffeeNet Discovery
+  allowed-authorities: ROLE_COFFEENET-ADMIN
+  discovery:
+    client:
+      service-url:
+        defaultZone: http://coffeenet-discovery.coffeenet:8761/eureka/
+      register-with-eureka: true
+      fetch-registry: false
+    instances:
+      home-page-url: http://localhost:8761
+      hostname: localhost
+      non-secure-port: 8761
+  logging:
+    console:
+      enabled: true
