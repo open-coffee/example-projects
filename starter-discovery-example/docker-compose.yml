@@ -1,0 +1,9 @@
+version: '2'
+services:
+  discovery:
+    image: coffeenet/coffeenet-discovery:latest
+    volumes:
+      - ./coffeenet-discovery/application.yml:/application.yml
+    ports:
+      - "8761:8761"
+    hostname: coffeenet-discovery.coffeenet

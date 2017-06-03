@@ -1,0 +1,23 @@
+spring:
+    profiles: development
+
+coffeenet:
+  application-name: ServiceDiscoveryDevelopmentExample
+  profile: development
+
+---
+
+spring:
+    profiles: integration
+
+coffeenet:
+  application-name: ServiceDiscoveryIntegrationExample
+  profile: integration
+  discovery:
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka/
+    instance:
+      hostname: localhost
+      non-secure-port: 8080
+      home-page-url: http://localhost:8080
