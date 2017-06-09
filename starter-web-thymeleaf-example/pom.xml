@@ -31,6 +31,16 @@
             <artifactId>starter-web-thymeleaf</artifactId>
         </dependency>
 
+        <!--<dependency>-->
+            <!--<groupId>coffee.synyx</groupId>-->
+            <!--<artifactId>starter-discovery</artifactId>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>coffee.synyx</groupId>-->
+            <!--<artifactId>starter-security</artifactId>-->
+        <!--</dependency>-->
+
         <!-- Optional -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -1,0 +1,3 @@
+coffeenet:
+  application-name: web-thymeleaf-example
+  profile: development
