@@ -15,7 +15,13 @@ Please start the provided graylog docker containers with
 ./docker-compose up
 ```
 
-and configure an UDP Input:
+and wait until it is fully started.
+Now on
+```
+http://localhost:9000 (admin/admin)
+```
+the graylogserver
+is available. Log in and  configure an UDP Input:
 
 ```
 System -> Inputs ->  Select 'GELF UDP' -> 'Launch new input' with following configuration
@@ -26,9 +32,7 @@ Title: CoffeeNet Starter Logging Test
 and take the defaults.
 ```
 
-
-Now on http://localhost:9000 (admin/admin) the graylog server is available and
-after you start this application, this application can push the
+after you start this application, the application can push the
 logs via udp packages to the graylog through the 12201 port.
 
 
