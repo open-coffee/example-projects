@@ -25,13 +25,19 @@ http://localhost:8080 or
 http://localhost:8080/filtered
 ```
 
+On `/filtered` you see only applications that can be accessed with
+the role `SPECIAL`, that is why there is no application listed.
+Because the `Discovery Sever` have the role `COFFEENET-ADMIN`.
+
 ## Development Profile
 
-Just start this application and see the mocked applications "registered"
-at the "service discovery server"
+Just start this application and see the mocked applications
+"registered" at the "service discovery server"
 
 ```
 http://localhost:8080  or
 http://localhost:8080/filtered
 ```
 
+In development mode the mock is not so intelligent to
+filter the applications, so you always see all of them.

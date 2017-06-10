@@ -40,7 +40,7 @@ public class DiscoveryExampleController {
         /*
          * Filtering is only implemented at the integration level and not in development
          */
-        AppQuery query = AppQuery.builder().withRole("ROLE_COFFEENET-ADMIN").build();
+        AppQuery query = AppQuery.builder().withRole("SPECIAL").build();
 
         return coffeeNetAppService.getApps(query);
     }
