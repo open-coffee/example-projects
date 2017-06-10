@@ -20,8 +20,8 @@ Now on
 ```
 http://localhost:9000 (admin/admin)
 ```
-the graylogserver
-is available. Log in and  configure an UDP Input:
+the graylog server is available. Log in and
+configure an UDP Input:
 
 ```
 System -> Inputs ->  Select 'GELF UDP' -> 'Launch new input' with following configuration
