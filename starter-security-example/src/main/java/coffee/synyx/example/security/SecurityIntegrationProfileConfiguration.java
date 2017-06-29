@@ -14,24 +14,19 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
  */
 @Configuration
 @ConditionalOnProperty(prefix = "coffeenet", name = "profile", havingValue = "integration")
-public class SecurityIntegrationProfileConfiguration extends IntegrationCoffeeNetWebSecurityConfigurerAdapter {
+class SecurityIntegrationProfileConfiguration extends IntegrationCoffeeNetWebSecurityConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
 
-        enableSso(http).authorizeRequests()
-            .antMatchers("/admin")
-            .hasRole("COFFEENET-ADMIN")
-            .and()
+        //J-
+        enableSso(http)
             .authorizeRequests()
-            .antMatchers("/not-secure")
-            .permitAll()
+                .antMatchers("/not-secure").permitAll()
+                .antMatchers("/admin").hasRole("COFFEENET-ADMIN")
+                .antMatchers("/**").authenticated()
             .and()
-            .authorizeRequests()
-            .antMatchers("/**")
-            .authenticated()
-            .and()
-            .csrf()
-            .disable();
+                .csrf().disable();
+        //J+
     }
 }
