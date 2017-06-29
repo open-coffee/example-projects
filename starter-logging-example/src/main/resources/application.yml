@@ -1,3 +1,5 @@
+server.port: 8091
+
 coffeenet:
   application-name: ExampleLogging
   profile: development

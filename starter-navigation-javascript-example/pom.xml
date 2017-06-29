@@ -4,17 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>starter-web-javascript-example</artifactId>
+    <artifactId>starter-navigation-javascript-example</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <packaging>jar</packaging>
 
-    <name>Example Project Starter Web JavaScript</name>
+    <name>Example Project Starter Navigation JavaScript</name>
 
     <parent>
         <groupId>coffee.synyx</groupId>
         <artifactId>coffeenet-starter-parent</artifactId>
-        <version>0.23.0</version>
+        <version>0.24.0-SNAPSHOT</version>
     </parent>
 
     <repositories>
@@ -28,18 +28,18 @@
         <!-- CoffeeNet -->
         <dependency>
             <groupId>coffee.synyx</groupId>
-            <artifactId>starter-web-javascript</artifactId>
+            <artifactId>starter-navigation-javascript</artifactId>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>coffee.synyx</groupId>-->
-            <!--<artifactId>starter-discovery</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>coffee.synyx</groupId>
+            <artifactId>starter-discovery</artifactId>
+        </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>coffee.synyx</groupId>-->
-            <!--<artifactId>starter-security</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>coffee.synyx</groupId>
+            <artifactId>starter-security</artifactId>
+        </dependency>
 
     </dependencies>
 

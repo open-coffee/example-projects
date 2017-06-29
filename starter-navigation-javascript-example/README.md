@@ -1,7 +1,7 @@
-# Starter Web JavaScript Example Project
+# Starter Navigation JavaScript Example Project
 
 This is an example project to show the behaviour
-of the web javascript starter.
+of the navigation javascript starter.
 
 The web javascript starter is designed to provide
 the CoffeeNet navigation bar with anchor points for

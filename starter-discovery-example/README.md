@@ -21,8 +21,8 @@ after you start this application, this application will register itself
 You can see all registered applications on
 
 ```
-http://localhost:8080 or
-http://localhost:8080/filtered
+http://localhost:8090 or
+http://localhost:8090/filtered
 ```
 
 On `/filtered` you see only applications that can be accessed with
@@ -35,8 +35,8 @@ Just start this application and see the mocked applications
 "registered" at the "service discovery server"
 
 ```
-http://localhost:8080  or
-http://localhost:8080/filtered
+http://localhost:8090  or
+http://localhost:8090/filtered
 ```
 
 In development mode the mock is not so intelligent to

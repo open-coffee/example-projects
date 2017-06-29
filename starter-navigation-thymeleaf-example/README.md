@@ -1,7 +1,7 @@
-# Starter Web Thymeleaf Example Project
+# Starter Navigation Thymeleaf Example Project
 
 This is an example project to show the behaviour
-of the web thymeleaf starter.
+of the navigation thymeleaf starter.
 
 The web thymeleaf starter is designed to provide
 the CoffeeNet navigation bar with anchor points for

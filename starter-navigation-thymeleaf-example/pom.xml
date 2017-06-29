@@ -14,7 +14,7 @@
     <parent>
         <groupId>coffee.synyx</groupId>
         <artifactId>coffeenet-starter-parent</artifactId>
-        <version>0.23.0</version>
+        <version>0.24.0-SNAPSHOT</version>
     </parent>
 
     <repositories>
@@ -28,18 +28,18 @@
         <!-- CoffeeNet -->
         <dependency>
             <groupId>coffee.synyx</groupId>
-            <artifactId>starter-web-thymeleaf</artifactId>
+            <artifactId>starter-navigation-thymeleaf</artifactId>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>coffee.synyx</groupId>-->
-            <!--<artifactId>starter-discovery</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>coffee.synyx</groupId>
+            <artifactId>starter-discovery</artifactId>
+        </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>coffee.synyx</groupId>-->
-            <!--<artifactId>starter-security</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>coffee.synyx</groupId>
+            <artifactId>starter-security</artifactId>
+        </dependency>
 
         <!-- Optional -->
         <dependency>

@@ -17,13 +17,13 @@ Please start the provided ldap and mariaDB docker containers with
 
 Now on the CoffeeNet Auth Server is available with all its dependencies (ldap, mariaDB).
 
-This example project is fully secure except of the http://localhost:8080/not-secure endpoints
+This example project is fully secure except of the http://localhost:8094/not-secure endpoints
 that was made available for everyone through the `SecurityIntegrationConfiguration`.
 
 If you want all endpoints to be secure, you do not have to create your own security configuration,
 because by default all endpoints are secured. See the development profile example.
 
-The endpoints http://localhost:8080 is still secure and needs authentication against the
+The endpoints http://localhost:8094 is still secure and needs authentication against the
 **CoffeeNet Auth Server**.
 
 ```
@@ -35,7 +35,7 @@ defined by the ldap server.
 
 #### Logout
 
-CoffeeNet Auth Server on http://localhost:9999/logout and delete the cookie on localhost:8080
+CoffeeNet Auth Server on http://localhost:9999/logout and delete the cookie on localhost:8094
 
 
 ## Development Profile
@@ -60,4 +60,4 @@ as described in the security starters documentation.
 
 #### Logout
 
-Go to http://localhost:8080/logout
+Go to http://localhost:8094/logout

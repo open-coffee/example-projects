@@ -1,3 +1,5 @@
+server.port: 8092
+
 coffeenet:
   application-name: web-javascript-example
   profile: development

@@ -1,3 +1,11 @@
+server.port: 8094
+
+spring:
+  profiles:
+    active: development
+
+--
+
 spring:
     profiles: development
 
