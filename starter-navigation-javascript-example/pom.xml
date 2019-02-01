@@ -12,7 +12,7 @@
     <name>Example Project Starter Navigation JavaScript</name>
 
     <parent>
-        <groupId>coffee.synyx</groupId>
+        <groupId>rocks.coffeenet</groupId>
         <artifactId>coffeenet-starter-parent</artifactId>
         <version>0.37.0</version>
     </parent>
@@ -27,17 +27,17 @@
     <dependencies>
         <!-- CoffeeNet -->
         <dependency>
-            <groupId>coffee.synyx</groupId>
+            <groupId>rocks.coffeenet</groupId>
             <artifactId>starter-navigation-javascript</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>coffee.synyx</groupId>
+            <groupId>rocks.coffeenet</groupId>
             <artifactId>starter-discovery</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>coffee.synyx</groupId>
+            <groupId>rocks.coffeenet</groupId>
             <artifactId>starter-security</artifactId>
         </dependency>
 

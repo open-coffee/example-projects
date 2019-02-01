@@ -11,7 +11,7 @@
     <name>Example Project Starter Discovery</name>
 
     <parent>
-        <groupId>coffee.synyx</groupId>
+        <groupId>rocks.coffeenet</groupId>
         <artifactId>coffeenet-starter-parent</artifactId>
         <version>0.37.0</version>
         <relativePath/>
@@ -33,7 +33,7 @@
 
         <!-- CoffeeNet -->
         <dependency>
-            <groupId>coffee.synyx</groupId>
+            <groupId>rocks.coffeenet</groupId>
             <artifactId>starter-discovery</artifactId>
         </dependency>
     </dependencies>
