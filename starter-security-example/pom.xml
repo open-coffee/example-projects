@@ -11,7 +11,7 @@
     <name>Example Project Security Starter</name>
 
     <parent>
-        <groupId>coffee.synyx</groupId>
+        <groupId>rocks.coffeenet</groupId>
         <artifactId>coffeenet-starter-parent</artifactId>
         <version>0.37.0</version>
     </parent>
@@ -32,7 +32,7 @@
 
         <!-- CoffeeNet -->
         <dependency>
-            <groupId>coffee.synyx</groupId>
+            <groupId>rocks.coffeenet</groupId>
             <artifactId>starter-security</artifactId>
         </dependency>
     </dependencies>
